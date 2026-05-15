@@ -1,0 +1,119 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% Configuración de página
+\usepackage[left=1.2cm, right=1.2cm, top=1.2cm, bottom=1.2cm]{geometry}
+\setlength{\parindent}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Colores
+\definecolor{customblue}{RGB}{0,34,68}
+\definecolor{accentyellow}{RGB}{255,235,59}
+
+% Comando para secciones
+\newcommand{\cvsection}[1]{
+    \vspace{0.3cm}
+    {\large\textbf{\color{accentyellow}#1}}
+    \vspace{0.2cm}
+    \hrule height 0.5pt
+    \vspace{0.3cm}
+}
+
+% Definición del card optimizado
+\newtcolorbox{projectcard}[2][]{
+    enhanced,
+    breakable,
+    colback=customblue,
+    colframe=white,
+    arc=1.5mm,
+    boxrule=1pt,
+    left=2mm, right=2mm, top=1mm, bottom=1mm,
+    attach boxed title to top left={xshift=2mm, yshift=-2mm},
+    boxed title style={
+        colback=white,
+        colframe=white,
+        arc=1mm,
+        boxrule=0pt,
+        left=2mm, right=2mm,
+    },
+    title={#2},
+    fonttitle=\small\bfseries\color{black},
+    width=\textwidth,
+    fontupper=\small\color{white},
+    #1
+}
+
+\begin{document}
+
+\pagecolor{customblue}
+\color{white}
+\pagestyle{empty}
+
+% Encabezado
+\begin{center}
+    {\Huge\bfseries Angel Altuve}\\[0.1cm]
+    {\Large\color{accentyellow} Desarrollador de Software / SysAdmin}\\[0.3cm]
+    
+    \begin{tabularx}{\textwidth}{@{} X X X @{}}
+    \centering \faPhone\ +58 424 6236635 & 
+    \centering \faEnvelope\ \href{mailto:angelaltuve@murena.io}{angelaltuve@murena.io} & 
+    \centering \faGithub\ \href{https://github.com/angelaltuve}{github.com/angelaltuve}
+    \end{tabularx}
+\end{center}
+
+% Perfil
+\cvsection{\faUser \hspace{0.5em} PERFIL PROFESIONAL}
+Desarrollador de software con experiencia en Python, automatización de tareas y gestión de bases de datos SQL. Capaz de adaptarse rápidamente a nuevas tecnologias y de colaborar eficazmente en equipos, apasionado por crear soluciones eficientes y mejorar procesos. 
+ 
+% Educación
+\cvsection{\faGraduationCap \hspace{0.5em} EDUCACIÓN}
+\begin{tabularx}{\textwidth}{@{} X r @{}}
+\textbf{Universidad del Zulia} & \textit{2020 -- Presente} \\
+Licenciatura en Computación (6° semestre cursando) & Maracaibo, Venezuela \\
+\end{tabularx}
+
+% Habilidades
+\cvsection{\faTools \hspace{0.5em} HABILIDADES TÉCNICAS}
+\begin{description}[font=\color{accentyellow}\bfseries, leftmargin=3.5cm, style=nextline]
+    \item[Programación:] Python, C, Bash Scripting.
+    \item[Sistemas Linux:] Gestión de Init (systemd, runit, dinit), Sistemas de archivos (ext4, btrfs), LVM, Cryptsetup.
+    \item[Redes y Seguridad:] SSH, Net-tools, Nmap, UFW, Iptables.
+    \item[Infraestructura:] Backups automatizados (Snapper, Borg, Rclone, Rsync), GPG.
+    \item[Idiomas:] Español (Nativo), Inglés (Técnico - Lectura y Documentación).
+\end{description}
+
+% Proyectos
+\cvsection{\faFolder \hspace{0.5em} PROYECTOS DESTACADOS}
+
+\begin{projectcard}{YogaCenterApp -- Gestión Administrativa}
+Aplicación de escritorio para la administración de centros de yoga. Tecnologias: sqlmodel, pyqt6, bcrypt, sqlite .
+\\ \footnotesize \faLink\ \url{https://github.com/angelaltuve/YogaCenterApp}
+\end{projectcard}
+
+\vspace{0.2cm}
+
+\begin{projectcard}{Automation ShellSuite}
+Conjunto de scripts para automatización de mantenimiento, Backups. Tecnologias: bash, borg, snapper, gpg.
+\\ \footnotesize \faLink\ \url{https://github.com/angelaltuve/scripts}
+\end{projectcard}
+
+\vspace{0.2cm}
+
+\begin{projectcard}{Dmenu Productivity Tools}
+Suite de herramientas basadas en dmenu para la productividad en el escritorio. Tecnologias: dmenu, bash, nmcli, cron.
+\\ \footnotesize \faLink\ \url{https://github.com/angelaltuve/dmenuscripts}
+\end{projectcard}
+
+\end{document}
