@@ -1,7 +1,7 @@
 # Introduction
 Self-taught software developer passionate about creating cool and functional things.
 
-- my [resumen](https://github.com/angelaltuve/angelaltuve/blob/files/resumen.pdf)
+- my [CV](https://angelaltuve.github.io/curriculum_vitae/) — Español / English
 
 ## Recent projects
 
